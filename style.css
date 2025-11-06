@@ -10,3 +10,63 @@
     height: 650px; 
     margin-bottom: 20px;
 }
+
+.radarButton1 {
+    background-color: transparent;
+    border: 2px solid blue;
+    padding: 6px 32px;
+    border-radius: 6px;
+}
+
+.radarButton1:hover {
+    background-color: blue;
+    color: white;
+}
+
+.radarButton2 {
+    background-color: transparent;
+    border: 2px solid green;
+    padding: 6px 32px;
+    border-radius: 6px;
+}
+
+.radarButton2:hover {
+    background-color: green;
+    color: white;
+}
+
+.radarButton3 {
+    background-color: transparent;
+    border: 2px solid yellowgreen;
+    padding: 6px 32px;
+    border-radius: 6px;
+}
+
+.radarButton3:hover {
+    background-color: yellowgreen;
+    color: white;
+}
+
+.radarButton4 {
+    background-color: transparent;
+    border: 2px solid purple;
+    padding: 6px 32px;
+    border-radius: 6px;
+}
+
+.radarButton4:hover {
+    background-color: purple;
+    color: white;
+}
+
+.radarButton5 {
+    background-color: transparent;
+    border: 2px solid grey;
+    padding: 6px 32px;
+    border-radius: 6px;
+}
+
+.radarButton5:hover {
+    background-color: grey;
+    color: white;
+}
