@@ -8,13 +8,31 @@ d3.select("#radar_svg").selectAll("*").remove();
 let width = 500;
 let height = 500;
 
+const color = d3.scaleOrdinal(d3.schemeCategory10);
+
 // append the svg object to the body of the page
 var master_svg = d3.select("#radar_svg")
     .append("svg")
     .attr("id", "render_svg")
-    .attr("width", width*2 + 100)
+    .attr("width", width*2 + 250)
     .attr("height", height)
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach((btn, i) => {
+    btn.style.borderColor = color(i);
+    btn.style.opacity = 0.75
+    
+    btn.addEventListener("mouseover", () => {
+       btn.style.background = color(i);
+    });
+
+    btn.addEventListener("mouseout", () => {
+       btn.style.background = "#ffffffff";
+    });
+  });
+});
 
 function RadarChartRender(centerX, centerY, title){
     let data = [];
@@ -101,8 +119,6 @@ function RadarChartRender(centerX, centerY, title){
         .x(d => d.x)
         .y(d => d.y);
 
-    let colors = ["darkorange", "gray", "navy"];
-
     // Get x,y,z coordinates for each attr
     function getPathCoordinates(data_point){
         let coordinates = [];
@@ -123,8 +139,8 @@ function RadarChartRender(centerX, centerY, title){
                 .datum(d => getPathCoordinates(d))
                 .attr("d", line)
                 .attr("stroke-width", 3)
-                .attr("stroke", (_, i) => colors[i])
-                .attr("fill", (_, i) => colors[i])
+                .attr("stroke", (_, i) => color(i))
+                .attr("fill", (_, i) => color(i))
                 .attr("stroke-opacity", 1)
                 .attr("opacity", 0.25)
         )
@@ -147,6 +163,8 @@ function RadarChartRender(centerX, centerY, title){
         .text(title);
 }
 
+
+
 RadarChartRender(50 + width/2, height/2, "Intel")
-RadarChartRender(width/2 + width + 50, height/2, "AMD")
+RadarChartRender(width/2 + width + 250, height/2, "AMD")
 
