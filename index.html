@@ -4,6 +4,7 @@
         <title>Course Project</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
         <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-2.27.1.min.js"></script>
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
@@ -17,6 +18,24 @@
             </div>
             <div class="subContainer">
                 <h3 class="text-center">Scatter Plot</h3>
+                <div class="controlPanel">
+                    <div>
+                        <label for="xSelect">X:</label>
+                        <select id="xSelect"></select>
+                    </div>
+
+                    <div>
+                        <label for="ySelect">Y:</label>
+                        <select id="ySelect"></select>
+                    </div>
+
+                    <div>
+                        <label for="zSelect">Z:</label>
+                        <select id="zSelect"></select>
+                    </div>
+                </div>
+
+                <div id="scatter-plot"></div>
             </div>
             <div class="subContainer">
                 <h3 class="text-center">3D radar chart</h3>
@@ -24,5 +43,5 @@
             <div class="subContainer">
                 <h3 class="text-center">Heat map</h3>
             </div>
-        <script src="xeflore1.js"></script>
+        <script src="scatter-plot.js"></script>
     </body>

@@ -10,3 +10,13 @@
     height: 650px; 
     margin-bottom: 20px;
 }
+
+/* 3D Scatter Plot */
+.controlPanel {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size:24px;
+    /* margin-left: 20%; */
+    /* margin-right: 20%; */
+}
